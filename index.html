@@ -220,7 +220,149 @@
         <div class="content" v-pre>
             
             
-            <hr>
+            <h1 id="Hexo静态网站搭建"><a href="#Hexo静态网站搭建" class="headerlink" title="Hexo静态网站搭建"></a>Hexo静态网站搭建</h1><h2 id="1-1安装Node-js"><a href="#1-1安装Node-js" class="headerlink" title="1.1安装Node.js"></a>1.1安装Node.js</h2><pre><code>node -v
+</code></pre>
+<h3 id="1-2查看npm版本"><a href="#1-2查看npm版本" class="headerlink" title="1.2查看npm版本"></a>1.2查看npm版本</h3><pre><code>npm -v
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@main/imgs/image-20230212102215061.png" alt="image-20230212102215061"></p>
+<h2 id="1-3安装git"><a href="#1-3安装git" class="headerlink" title="1.3安装git"></a>1.3安装git</h2><p>注：git和github是两个东西。github是基于git二次开发的，git是github的核心，git负责与github相关的所有本地工作。</p>
+<pre><code>
+</code></pre>
+<h2 id="1-4gitee使用"><a href="#1-4gitee使用" class="headerlink" title="1.4gitee使用"></a>1.4gitee使用</h2><h3 id="1-4-1公匙SSH创建"><a href="#1-4-1公匙SSH创建" class="headerlink" title="1.4.1公匙SSH创建"></a>1.4.1公匙SSH创建</h3><p>根据提示按回车三次，格式如：</p>
+<p>&#x3D;&#x3D;&#x3D; ssh-keygen -t ed25519 -C “<a href="mailto:&#x78;&#x78;&#120;&#x40;&#120;&#120;&#x2e;&#x63;&#x6f;&#x6d;">&#x78;&#x78;&#120;&#x40;&#120;&#120;&#x2e;&#x63;&#x6f;&#x6d;</a>“ &#x3D;&#x3D;&#x3D;</p>
+<pre><code class="bash">ssh-keygen -t ed25519 -C &quot;940441542@qq.com&quot;
+ssh-keygen -t ed25519 -C &quot;erniu2436@gmail.com&quot;
+ssh-keygen -t ed25519 -C &quot;itchenj@163.com&quot;
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230212180558561.png" alt="image-20230212180558561"></p>
+<h3 id="1-4-2查看公匙-x2F-私匙"><a href="#1-4-2查看公匙-x2F-私匙" class="headerlink" title="1.4.2查看公匙&#x2F;私匙"></a>1.4.2查看公匙&#x2F;私匙</h3><h4 id="x3D-gt-gt-查看公匙"><a href="#x3D-gt-gt-查看公匙" class="headerlink" title="&#x3D;&gt;&gt;查看公匙"></a>&#x3D;&gt;&gt;查看公匙</h4><p>通过以下命令显示公匙，将显示的公匙复制粘贴到公匙区</p>
+<pre><code class="bash">cat ~/.ssh/id_ed25519.pub
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120213717422.png" alt="image-20230120213717422"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120214029499.png" alt="image-20230120214029499"></p>
+<h4 id="x3D-gt-gt-查看私钥"><a href="#x3D-gt-gt-查看私钥" class="headerlink" title="&#x3D;&gt;&gt;查看私钥"></a>&#x3D;&gt;&gt;查看私钥</h4><pre><code class="bash">cat ~/.ssh/id_ed25519
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120214616007.png" alt="image-20230120214616007"></p>
+<pre><code class="bash">b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACBqzwM0oloRx6XqtToephE9Y318v6dH5QWi4g+MHKH6kAAAAJhc+pUYXPqV
+GAAAAAtzc2gtZWQyNTUxOQAAACBqzwM0oloRx6XqtToephE9Y318v6dH5QWi4g+MHKH6kA
+AAAECXKUku7qJz43EtvG8nBC4Ha6Nvm31P8ep2LLiB2S4xnGrPAzSiWhHHpeq1Oh6mET1j
+fXy/p0flBaLiD4wcofqQAAAAEDk0MDQ0MTU0MkBxcS5jb20BAgMEBQ==
+</code></pre>
+<h3 id="1-4-3-首次使用需要确认并添加主机到本机SSH可信列表若返回-Hi-XXX-You-39-ve-successfully-authenticated-but-Gitee-com-does-not-provide-shell-access-内容，则证明添加成功。"><a href="#1-4-3-首次使用需要确认并添加主机到本机SSH可信列表若返回-Hi-XXX-You-39-ve-successfully-authenticated-but-Gitee-com-does-not-provide-shell-access-内容，则证明添加成功。" class="headerlink" title="1.4.3 首次使用需要确认并添加主机到本机SSH可信列表若返回 Hi XXX! You&#39;ve successfully authenticated, but Gitee.com does not provide shell access. 内容，则证明添加成功。"></a>1.4.3 首次使用需要确认并添加主机到本机SSH可信列表若返回 <code>Hi XXX! You&#39;ve successfully authenticated, but Gitee.com does not provide shell access.</code> 内容，则证明添加成功。</h3><p>在终端（Terminal）中输入:</p>
+<pre><code>ssh -T git@gitee.com
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120215003113.png" alt="image-20230120215003113"></p>
+<pre><code class="bash">ssh -T git@github.com
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230211130125735.png" alt="image-20230211130125735"></p>
+<p>添加成功后，就可以使用SSH协议对仓库进行操作了。</p>
+<h2 id="1-5安装Hexo"><a href="#1-5安装Hexo" class="headerlink" title="1.5安装Hexo"></a>1.5安装Hexo</h2><h3 id="1-5-1新建仓库"><a href="#1-5-1新建仓库" class="headerlink" title="1.5.1新建仓库"></a>1.5.1新建仓库</h3><h5 id="gitee"><a href="#gitee" class="headerlink" title="gitee"></a>gitee</h5><p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120221043965.png" alt="image-20230120221043965"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120220930144.png" alt="image-20230120220930144"></p>
+<h5 id="github"><a href="#github" class="headerlink" title="github"></a>github</h5><p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121195725632.png" alt="image-20230121195725632"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121195907315.png" alt="image-20230121195907315"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121195954165.png" alt="image-20230121195954165"></p>
+<h3 id="1-5-2配置git参数"><a href="#1-5-2配置git参数" class="headerlink" title="1.5.2配置git参数"></a>1.5.2配置git参数</h3><pre><code class="bash">git config --global user.name &quot;erniu-up&quot;
+git config --global user.email &quot;940441542@qq.com&quot;
+
+git config --global user.name &quot;itchenjun&quot;
+git config --global user.email &quot;itchenj@163.com&quot;
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120221557012.png" alt="image-20230120221557012"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230211130313995.png" alt="image-20230211130313995"></p>
+<p>生成 SSH keys，主要用于Git 提交时的权限控制和加密，本地根据 RSA 算法生成公私密钥对，然后将公钥添加到 Gitee 上，本机就可以提交代码到自己的 GitHub 库了。这个是根据当前使用的电脑的一些信息生成的，所以换电脑提交时要重新生成并添加。</p>
+<pre><code class="bash">ssh-keygen -t rsa -C &quot;940441542@qq.com&quot;
+ssh-keygen -t rsa -C &quot;itchenj@163.com&quot;
+</code></pre>
+<p>继续回车</p>
+<p>在gitbash中，查看是否成功</p>
+<pre><code>ssh -T git@github.com
+</code></pre>
+<h4 id="以管理员方式打开cmd进行安装"><a href="#以管理员方式打开cmd进行安装" class="headerlink" title="以管理员方式打开cmd进行安装"></a>以管理员方式打开cmd进行安装</h4><pre><code>npm install hexo-cli -g
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120225732488-1675598711132.png" alt="image-20230120225732488"></p>
+<h4 id="输入以下指令检测hexo是否安装成功"><a href="#输入以下指令检测hexo是否安装成功" class="headerlink" title="输入以下指令检测hexo是否安装成功"></a>输入以下指令检测hexo是否安装成功</h4><pre><code class="bash">hexo -v
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120225802278.png" alt="image-20230120225802278"></p>
+<h4 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h4><p>注：此过程需要时间</p>
+<pre><code class="bash">hexo init
+</code></pre>
+<h6 id="gitee-1"><a href="#gitee-1" class="headerlink" title="gitee"></a>gitee</h6><p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120234436483.png" alt="image-20230120234436483"></p>
+<h6 id="github-1"><a href="#github-1" class="headerlink" title="github"></a>github</h6><p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121201409552.png" alt="image-20230121201409552"></p>
+<p>新建完成后，指定文件夹目录下有：</p>
+<ul>
+<li>node_modules: 依赖包</li>
+<li>public：存放生成的页面</li>
+<li>scaffolds：生成文章的一些模板</li>
+<li>source：用来存放你的文章</li>
+<li>themes：主题</li>
+<li>** _config.yml: 博客的配置文件**</li>
+</ul>
+<p>hexo init 安装失败解决：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/HANZY72/article/details/122505375">https://blog.csdn.net/HANZY72/article/details/122505375</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120235028683.png" alt="image-20230120235028683"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120235118407.png" alt="image-20230120235118407"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120235106401.png" alt="image-20230120235106401"></p>
+<h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><pre><code class="bash">hexo g
+</code></pre>
+<p><img src="D:/Users/lenovo/Desktop/images/image-20230120234648748.png" alt="image-20230120234648748"></p>
+<p>打开hexo的服务，在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
+<pre><code>hexo server
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120234703370.png" alt="image-20230120234703370"></p>
+<p>如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120234848809.png" alt="image-20230120234848809"></p>
+<p>&#x3D;&#x3D;&#x3D;全局预览&#x3D;&#x3D;&#x3D;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120235317323.png" alt="image-20230120235317323"></p>
+<h2 id="1-6将hexo部署到GitHub-x2F-Gitee"><a href="#1-6将hexo部署到GitHub-x2F-Gitee" class="headerlink" title="1.6将hexo部署到GitHub&#x2F;Gitee"></a>1.6将hexo部署到GitHub&#x2F;Gitee</h2><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 <code>_config.yml</code>，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
+<pre><code class="bash">deploy:
+  type: git
+  repo: https://github.com/erniu-up/erniu-up.github.io.git
+  branch: master
+</code></pre>
+<p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
+<pre><code class="bash">npm install hexo-deployer-git --save
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121201835155.png" alt="image-20230121201835155"></p>
+<h4 id="远程部署"><a href="#远程部署" class="headerlink" title="远程部署"></a>远程部署</h4><pre><code class="bash">hexo clean
+hexo generate
+hexo deploy
+hexo cl &amp;&amp; hexo g &amp;&amp; hexo d
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202024169.png" alt="image-20230121202024169"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202110480.png" alt="image-20230121202110480"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202214007.png" alt="image-20230121202214007"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202204021.png" alt="image-20230121202204021"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202305674.png" alt="image-20230121202305674"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202441006.png" alt="image-20230121202441006"></p>
+<p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
+<p>注意deploy时可能要你输入username和password。</p>
+<p>得到下图就说明部署成功了，过一会儿就可以在<code>http://yourname.github.io</code> 这个网站看到你的博客了！！</p>
+<pre><code class="c">http://erniu-up.github.io
+</code></pre>
+<p>网站快速发布生效</p>
+<p>本地浏览</p>
+<pre><code class="bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
+</code></pre>
+<p>远程部署</p>
+<pre><code class="BASH">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+</code></pre>
+<h2 id="1-7设置个人域名"><a href="#1-7设置个人域名" class="headerlink" title="1.7设置个人域名"></a>1.7设置个人域名</h2><h2 id="1-8更换主题"><a href="#1-8更换主题" class="headerlink" title="1.8更换主题"></a>1.8更换主题</h2><p>更换主题后，我们需要修改一些基本属性，比如博客名字、首页图片等，或者增加一些个性化属性，比如鼠标指针样式，雪花特效，点击特效等。本篇文章先介绍一下如何修改基本属性，以便于接下来发布网站，在本系列文章第七篇再介绍高级的个性化设置。</p>
+<p>Hexo 的配置大部分都保存在博客根目录下的<code>_config.yml</code>文件，我这里是<code>I:\MyBlog\githubBlog\_config.yml</code>，我们叫它<code>根目录配置文件</code>，直接修改这个文件就可以更改博客的一些设置，像前面更换主题就是修改这个文件的参数实现的。关于这个文件的每个参数的详细意义，可以在 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo官方文档</a>里查看，每一个参数都有示例，讲解的非常详细。</p>
+<p>此外，下载的第三方主题的根目录下也有一个<code>_config.yml</code>文件，比如 <strong>next</strong> 主题，我这里就是<code>D:\MyBlog\themes\next\_config.yml</code>文件，我们叫它<code>主题配置文件</code>。关于这个文件每个参数的详细意义，可以在每个主题的 GitHub 主页看到详细说明。</p>
+<p>如果你使用的是自带的默认主题，那么所有配置都应该在<code>根目录配置文件</code>修改。如果是用的是第三方那个主题，需要两个文件配合修改。</p>
+<p>以 <strong>next</strong> 主题为例。</p>
+<p>首先，按上面第3步更换主题的方法，将<code>根目录配置文件</code>的 theme 属性设置为对应的主题名字 <code>next</code>。打开<code>根目录配置文件</code>(D:\I:\MyBlog\githubBlog\_config.yml)。</p>
+<p>修改配置（），修改博客基本信息。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230122114701526.png" alt="image-20230122114701526"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230122120015203.png" alt="image-20230122120015203"></p>
+<h2 id="1-9-git分支多终端工作"><a href="#1-9-git分支多终端工作" class="headerlink" title="1.9 git分支多终端工作"></a>1.9 git分支多终端工作</h2><p>新建hexo分支，切换到hexo为默认分支</p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230205105627638.png" alt="image-20230205105627638"></p>
+<p>切换默认分支步骤如下：找到当前仓库下的Settings→Branches→ ⇵</p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230205105648767.png" alt="image-20230205105648767"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230205105758604.png" alt="image-20230205105758604"></p>
+<p>切换默认分支</p>
+<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230205105840658.png" alt="image-20230205105840658"></p>
 
             
         </div>
@@ -235,7 +377,7 @@
         
         <span class="tag">
             
-            <a href="/tags/test" style=color:#00bcd4>
+            <a href="/tags/test" style=color:#ff7d73>
                 test
             </a>
         </span>
@@ -272,149 +414,7 @@
         <div class="content" v-pre>
             
             
-            <h1 id="Hexo静态网站搭建"><a href="#Hexo静态网站搭建" class="headerlink" title="Hexo静态网站搭建"></a>Hexo静态网站搭建</h1><h2 id="1-1安装Node-js"><a href="#1-1安装Node-js" class="headerlink" title="1.1安装Node.js"></a>1.1安装Node.js</h2><pre><code>node -v
-</code></pre>
-<h3 id="1-2查看npm版本"><a href="#1-2查看npm版本" class="headerlink" title="1.2查看npm版本"></a>1.2查看npm版本</h3><pre><code>npm -v
-</code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@main/imgs/image-20230212102215061.png" alt="image-20230212102215061"></p>
-<h2 id="1-3安装git"><a href="#1-3安装git" class="headerlink" title="1.3安装git"></a>1.3安装git</h2><p>注：git和github是两个东西。github是基于git二次开发的，git是github的核心，git负责与github相关的所有本地工作。</p>
-<pre><code>
-</code></pre>
-<h2 id="1-4gitee使用"><a href="#1-4gitee使用" class="headerlink" title="1.4gitee使用"></a>1.4gitee使用</h2><h3 id="1-4-1公匙SSH创建"><a href="#1-4-1公匙SSH创建" class="headerlink" title="1.4.1公匙SSH创建"></a>1.4.1公匙SSH创建</h3><p>根据提示按回车三次，格式如：</p>
-<p>&#x3D;&#x3D;&#x3D; ssh-keygen -t ed25519 -C “<a href="mailto:&#120;&#x78;&#120;&#x40;&#120;&#120;&#46;&#x63;&#111;&#x6d;">&#120;&#x78;&#120;&#x40;&#120;&#120;&#46;&#x63;&#111;&#x6d;</a>“ &#x3D;&#x3D;&#x3D;</p>
-<pre><code class="bash">ssh-keygen -t ed25519 -C &quot;940441542@qq.com&quot;
-ssh-keygen -t ed25519 -C &quot;erniu2436@gmail.com&quot;
-ssh-keygen -t ed25519 -C &quot;itchenj@163.com&quot;
-</code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230212180558561.png" alt="image-20230212180558561"></p>
-<h3 id="1-4-2查看公匙-x2F-私匙"><a href="#1-4-2查看公匙-x2F-私匙" class="headerlink" title="1.4.2查看公匙&#x2F;私匙"></a>1.4.2查看公匙&#x2F;私匙</h3><h4 id="x3D-gt-gt-查看公匙"><a href="#x3D-gt-gt-查看公匙" class="headerlink" title="&#x3D;&gt;&gt;查看公匙"></a>&#x3D;&gt;&gt;查看公匙</h4><p>通过以下命令显示公匙，将显示的公匙复制粘贴到公匙区</p>
-<pre><code class="bash">cat ~/.ssh/id_ed25519.pub
-</code></pre>
-<p><img src="/posts/undefined/image-20230120213717422.png" alt="image-20230120213717422"></p>
-<p><img src="/posts/undefined/image-20230120214029499.png" alt="image-20230120214029499"></p>
-<h4 id="x3D-gt-gt-查看私钥"><a href="#x3D-gt-gt-查看私钥" class="headerlink" title="&#x3D;&gt;&gt;查看私钥"></a>&#x3D;&gt;&gt;查看私钥</h4><pre><code class="bash">cat ~/.ssh/id_ed25519
-</code></pre>
-<p><img src="/posts/undefined/image-20230120214616007.png" alt="image-20230120214616007"></p>
-<pre><code class="bash">b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-QyNTUxOQAAACBqzwM0oloRx6XqtToephE9Y318v6dH5QWi4g+MHKH6kAAAAJhc+pUYXPqV
-GAAAAAtzc2gtZWQyNTUxOQAAACBqzwM0oloRx6XqtToephE9Y318v6dH5QWi4g+MHKH6kA
-AAAECXKUku7qJz43EtvG8nBC4Ha6Nvm31P8ep2LLiB2S4xnGrPAzSiWhHHpeq1Oh6mET1j
-fXy/p0flBaLiD4wcofqQAAAAEDk0MDQ0MTU0MkBxcS5jb20BAgMEBQ==
-</code></pre>
-<h3 id="1-4-3-首次使用需要确认并添加主机到本机SSH可信列表若返回-Hi-XXX-You-39-ve-successfully-authenticated-but-Gitee-com-does-not-provide-shell-access-内容，则证明添加成功。"><a href="#1-4-3-首次使用需要确认并添加主机到本机SSH可信列表若返回-Hi-XXX-You-39-ve-successfully-authenticated-but-Gitee-com-does-not-provide-shell-access-内容，则证明添加成功。" class="headerlink" title="1.4.3 首次使用需要确认并添加主机到本机SSH可信列表若返回 Hi XXX! You&#39;ve successfully authenticated, but Gitee.com does not provide shell access. 内容，则证明添加成功。"></a>1.4.3 首次使用需要确认并添加主机到本机SSH可信列表若返回 <code>Hi XXX! You&#39;ve successfully authenticated, but Gitee.com does not provide shell access.</code> 内容，则证明添加成功。</h3><p>在终端（Terminal）中输入:</p>
-<pre><code>ssh -T git@gitee.com
-</code></pre>
-<p><img src="/posts/undefined/image-20230120215003113.png" alt="image-20230120215003113"></p>
-<pre><code class="bash">ssh -T git@github.com
-</code></pre>
-<p><img src="/posts/undefined/image-20230211130125735.png" alt="image-20230211130125735"></p>
-<p>添加成功后，就可以使用SSH协议对仓库进行操作了。</p>
-<h2 id="1-5安装Hexo"><a href="#1-5安装Hexo" class="headerlink" title="1.5安装Hexo"></a>1.5安装Hexo</h2><h3 id="1-5-1新建仓库"><a href="#1-5-1新建仓库" class="headerlink" title="1.5.1新建仓库"></a>1.5.1新建仓库</h3><h5 id="gitee"><a href="#gitee" class="headerlink" title="gitee"></a>gitee</h5><p><img src="/posts/undefined/image-20230120221043965.png" alt="image-20230120221043965"></p>
-<p><img src="/posts/undefined/image-20230120220930144.png" alt="image-20230120220930144"></p>
-<h5 id="github"><a href="#github" class="headerlink" title="github"></a>github</h5><p><img src="/posts/undefined/image-20230121195725632.png" alt="image-20230121195725632"></p>
-<p><img src="/posts/undefined/image-20230121195907315.png" alt="image-20230121195907315"></p>
-<p><img src="/posts/undefined/image-20230121195954165.png" alt="image-20230121195954165"></p>
-<h3 id="1-5-2配置git参数"><a href="#1-5-2配置git参数" class="headerlink" title="1.5.2配置git参数"></a>1.5.2配置git参数</h3><pre><code class="bash">git config --global user.name &quot;erniu-up&quot;
-git config --global user.email &quot;940441542@qq.com&quot;
-
-git config --global user.name &quot;itchenjun&quot;
-git config --global user.email &quot;itchenj@163.com&quot;
-</code></pre>
-<p><img src="/posts/undefined/image-20230120221557012.png" alt="image-20230120221557012"></p>
-<p><img src="/posts/undefined/image-20230211130313995.png" alt="image-20230211130313995"></p>
-<p>生成 SSH keys，主要用于Git 提交时的权限控制和加密，本地根据 RSA 算法生成公私密钥对，然后将公钥添加到 Gitee 上，本机就可以提交代码到自己的 GitHub 库了。这个是根据当前使用的电脑的一些信息生成的，所以换电脑提交时要重新生成并添加。</p>
-<pre><code class="bash">ssh-keygen -t rsa -C &quot;940441542@qq.com&quot;
-ssh-keygen -t rsa -C &quot;itchenj@163.com&quot;
-</code></pre>
-<p>继续回车</p>
-<p>在gitbash中，查看是否成功</p>
-<pre><code>ssh -T git@github.com
-</code></pre>
-<h4 id="以管理员方式打开cmd进行安装"><a href="#以管理员方式打开cmd进行安装" class="headerlink" title="以管理员方式打开cmd进行安装"></a>以管理员方式打开cmd进行安装</h4><pre><code>npm install hexo-cli -g
-</code></pre>
-<p><img src="/posts/undefined/image-20230120225732488-1675598711132.png" alt="image-20230120225732488"></p>
-<h4 id="输入以下指令检测hexo是否安装成功"><a href="#输入以下指令检测hexo是否安装成功" class="headerlink" title="输入以下指令检测hexo是否安装成功"></a>输入以下指令检测hexo是否安装成功</h4><pre><code class="bash">hexo -v
-</code></pre>
-<p><img src="/posts/undefined/image-20230120225802278.png" alt="image-20230120225802278"></p>
-<h4 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h4><p>注：此过程需要时间</p>
-<pre><code class="bash">hexo init
-</code></pre>
-<h6 id="gitee-1"><a href="#gitee-1" class="headerlink" title="gitee"></a>gitee</h6><p><img src="/posts/undefined/image-20230120234436483.png" alt="image-20230120234436483"></p>
-<h6 id="github-1"><a href="#github-1" class="headerlink" title="github"></a>github</h6><p><img src="/posts/undefined/image-20230121201409552.png" alt="image-20230121201409552"></p>
-<p>新建完成后，指定文件夹目录下有：</p>
-<ul>
-<li>node_modules: 依赖包</li>
-<li>public：存放生成的页面</li>
-<li>scaffolds：生成文章的一些模板</li>
-<li>source：用来存放你的文章</li>
-<li>themes：主题</li>
-<li>** _config.yml: 博客的配置文件**</li>
-</ul>
-<p>hexo init 安装失败解决：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/HANZY72/article/details/122505375">https://blog.csdn.net/HANZY72/article/details/122505375</a></p>
-<p><img src="/posts/undefined/image-20230120235028683.png" alt="image-20230120235028683"></p>
-<p><img src="/posts/undefined/image-20230120235118407.png" alt="image-20230120235118407"></p>
-<p><img src="/posts/undefined/image-20230120235106401.png" alt="image-20230120235106401"></p>
-<h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><pre><code class="bash">hexo g
-</code></pre>
-<p><img src="D:/Users/lenovo/Desktop/images/image-20230120234648748.png" alt="image-20230120234648748"></p>
-<p>打开hexo的服务，在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
-<pre><code>hexo server
-</code></pre>
-<p><img src="/posts/undefined/image-20230120234703370.png" alt="image-20230120234703370"></p>
-<p>如下所示：</p>
-<p><img src="/posts/undefined/image-20230120234848809.png" alt="image-20230120234848809"></p>
-<p>&#x3D;&#x3D;&#x3D;全局预览&#x3D;&#x3D;&#x3D;</p>
-<p><img src="/posts/undefined/image-20230120235317323.png" alt="image-20230120235317323"></p>
-<h2 id="1-6将hexo部署到GitHub-x2F-Gitee"><a href="#1-6将hexo部署到GitHub-x2F-Gitee" class="headerlink" title="1.6将hexo部署到GitHub&#x2F;Gitee"></a>1.6将hexo部署到GitHub&#x2F;Gitee</h2><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 <code>_config.yml</code>，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
-<pre><code class="bash">deploy:
-  type: git
-  repo: https://github.com/erniu-up/erniu-up.github.io.git
-  branch: master
-</code></pre>
-<p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
-<pre><code class="bash">npm install hexo-deployer-git --save
-</code></pre>
-<p><img src="/posts/undefined/image-20230121201835155.png" alt="image-20230121201835155"></p>
-<h4 id="远程部署"><a href="#远程部署" class="headerlink" title="远程部署"></a>远程部署</h4><pre><code class="bash">hexo clean
-hexo generate
-hexo deploy
-hexo cl &amp;&amp; hexo g &amp;&amp; hexo d
-</code></pre>
-<p><img src="/posts/undefined/image-20230121202024169.png" alt="image-20230121202024169"></p>
-<p><img src="/posts/undefined/image-20230121202110480.png" alt="image-20230121202110480"></p>
-<p><img src="/posts/undefined/image-20230121202214007.png" alt="image-20230121202214007"></p>
-<p><img src="/posts/undefined/image-20230121202204021.png" alt="image-20230121202204021"></p>
-<p><img src="/posts/undefined/image-20230121202305674.png" alt="image-20230121202305674"></p>
-<p><img src="/posts/undefined/image-20230121202441006.png" alt="image-20230121202441006"></p>
-<p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
-<p>注意deploy时可能要你输入username和password。</p>
-<p>得到下图就说明部署成功了，过一会儿就可以在<code>http://yourname.github.io</code> 这个网站看到你的博客了！！</p>
-<pre><code class="c">http://erniu-up.github.io
-</code></pre>
-<p>网站快速发布生效</p>
-<p>本地浏览</p>
-<pre><code class="bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
-</code></pre>
-<p>远程部署</p>
-<pre><code class="BASH">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
-</code></pre>
-<h2 id="1-7设置个人域名"><a href="#1-7设置个人域名" class="headerlink" title="1.7设置个人域名"></a>1.7设置个人域名</h2><h2 id="1-8更换主题"><a href="#1-8更换主题" class="headerlink" title="1.8更换主题"></a>1.8更换主题</h2><p>更换主题后，我们需要修改一些基本属性，比如博客名字、首页图片等，或者增加一些个性化属性，比如鼠标指针样式，雪花特效，点击特效等。本篇文章先介绍一下如何修改基本属性，以便于接下来发布网站，在本系列文章第七篇再介绍高级的个性化设置。</p>
-<p>Hexo 的配置大部分都保存在博客根目录下的<code>_config.yml</code>文件，我这里是<code>I:\MyBlog\githubBlog\_config.yml</code>，我们叫它<code>根目录配置文件</code>，直接修改这个文件就可以更改博客的一些设置，像前面更换主题就是修改这个文件的参数实现的。关于这个文件的每个参数的详细意义，可以在 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo官方文档</a>里查看，每一个参数都有示例，讲解的非常详细。</p>
-<p>此外，下载的第三方主题的根目录下也有一个<code>_config.yml</code>文件，比如 <strong>next</strong> 主题，我这里就是<code>D:\MyBlog\themes\next\_config.yml</code>文件，我们叫它<code>主题配置文件</code>。关于这个文件每个参数的详细意义，可以在每个主题的 GitHub 主页看到详细说明。</p>
-<p>如果你使用的是自带的默认主题，那么所有配置都应该在<code>根目录配置文件</code>修改。如果是用的是第三方那个主题，需要两个文件配合修改。</p>
-<p>以 <strong>next</strong> 主题为例。</p>
-<p>首先，按上面第3步更换主题的方法，将<code>根目录配置文件</code>的 theme 属性设置为对应的主题名字 <code>next</code>。打开<code>根目录配置文件</code>(D:\I:\MyBlog\githubBlog\_config.yml)。</p>
-<p>修改配置（），修改博客基本信息。</p>
-<p><img src="/posts/undefined/image-20230122114701526.png" alt="image-20230122114701526"></p>
-<p><img src="/posts/undefined/image-20230122120015203.png" alt="image-20230122120015203"></p>
-<h2 id="1-9-git分支多终端工作"><a href="#1-9-git分支多终端工作" class="headerlink" title="1.9 git分支多终端工作"></a>1.9 git分支多终端工作</h2><p>新建hexo分支，切换到hexo为默认分支</p>
-<p><img src="/posts/undefined/image-20230205105627638.png" alt="image-20230205105627638"></p>
-<p>切换默认分支步骤如下：找到当前仓库下的Settings→Branches→ ⇵</p>
-<p><img src="/posts/undefined/image-20230205105648767.png" alt="image-20230205105648767"></p>
-<p><img src="/posts/undefined/image-20230205105758604.png" alt="image-20230205105758604"></p>
-<p>切换默认分支</p>
-<p><img src="/posts/undefined/image-20230205105840658.png" alt="image-20230205105840658"></p>
+            <hr>
 
             
         </div>
@@ -527,12 +527,12 @@ hexo cl &amp;&amp; hexo g &amp;&amp; hexo d
                 target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
         
     </div>
+<!--这一段是不蒜子的访问量统计代码-->
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次 &nbsp;   </span>
+	<span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span>
 
 </footer>
-<!--这一段是不蒜子的访问量统计代码-->
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次 &nbsp;   </span>
-<span id="busuanzi_container_site_uv">访客数<span id="busuanzi_value_site_uv"></span>人次</span>
 
 <script src="/js/highlight.min.js"></script>
 <script src="/js/particle.js"></script>
