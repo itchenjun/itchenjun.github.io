@@ -3,19 +3,66 @@
 <head>
   <meta charset="utf-8">
   
-  <title>生而平凡</title>
+  <title>Hexo静态网站搭建 | 生而平凡</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="生而平凡">
-<meta property="og:url" content="https://cj25.top/page/2/index.html">
+  <meta name="description" content="Hexo静态网站搭建1.1安装Node.js1node -v  1.2查看npm版本1npm -v   1.3安装git注：git和github是两个东西。github是基于git二次开发的，git是github的核心，git负责与github相关的所有本地工作。 1  1.4gitee使用1.4.1公匙SSH创建根据提示按回车三次，格式如： &#x3D;&#x3D;&#x3D; ssh-keyg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo静态网站搭建">
+<meta property="og:url" content="https://cj25.top/2023/02/13/Hexo%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="生而平凡">
+<meta property="og:description" content="Hexo静态网站搭建1.1安装Node.js1node -v  1.2查看npm版本1npm -v   1.3安装git注：git和github是两个东西。github是基于git二次开发的，git是github的核心，git负责与github相关的所有本地工作。 1  1.4gitee使用1.4.1公匙SSH创建根据提示按回车三次，格式如： &#x3D;&#x3D;&#x3D; ssh-keyg">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@main/imgs/image-20230212102215061.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230212180558561.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120213717422.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120214029499.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120214616007.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120215003113.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230211130125735.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120221043965.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120220930144.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121195725632.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121195907315.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121195954165.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120221557012.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230211130313995.png">
+<meta property="og:image" content="https://cj25.top/posts/undefined/image-20230325223123769.png">
+<meta property="og:image" content="https://cj25.top/posts/undefined/image-20230325223142438.png">
+<meta property="og:image" content="https://cj25.top/posts/undefined/image-20230325223219020.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120225732488-1675598711132.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120225802278.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120234436483.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121201409552.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120235028683.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120235118407.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120235106401.png">
+<meta property="og:image" content="d:/Users/lenovo/Desktop/images/image-20230120234648748.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120234703370.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120234848809.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230120235317323.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121201835155.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202024169.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202110480.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202214007.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202204021.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202305674.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230121202441006.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230122114701526.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230122120015203.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230205105627638.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230205105648767.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230205105758604.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/image-20230205105840658.png">
+<meta property="article:published_time" content="2023-02-12T21:18:02.000Z">
+<meta property="article:modified_time" content="2023-03-26T01:01:57.282Z">
 <meta property="article:author" content="chenjun">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@main/imgs/image-20230212102215061.png">
   
     <link rel="alternative" href="/atom.xml" title="生而平凡" type="application/atom+xml">
   
@@ -246,80 +293,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-书单" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/02/14/%E4%B9%A6%E5%8D%95/" class="article-date">
-  	<time datetime="2023-02-13T21:18:02.000Z" itemprop="datePublished">2023-02-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/14/%E4%B9%A6%E5%8D%95/">
-        书单
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a target="_blank" rel="noopener" href="https://note.youdao.com/s/Paa3d5nL">https://note.youdao.com/s/Paa3d5nL</a></p>
-<p>test-abc</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B9%A6%E5%8D%95/" rel="tag">书单</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2023/02/14/%E4%B9%A6%E5%8D%95/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="书单">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Hexo静态网站搭建" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Hexo静态网站搭建" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2023/02/13/Hexo%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="article-date">
@@ -335,15 +309,35 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/13/Hexo%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">
-        Hexo静态网站搭建
-        
-      </a>
+    <h1 class="article-title" itemprop="name">
+      Hexo静态网站搭建
+      
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+	</div>
+
+        
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2023/02/13/Hexo%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="Hexo静态网站搭建">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -491,46 +485,46 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2023/02/13/Hexo%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="Hexo静态网站搭建">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/02/14/%E4%B9%A6%E5%8D%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          书单
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
 
+<div class="ds-share share" data-thread-key="Hexo静态网站搭建" data-title="Hexo静态网站搭建" data-url="https://cj25.top/2023/02/13/Hexo%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"  data-images="https://foruda.gitee.com/avatar/1676353096217459510/12348154_itchenjun_1676353096.png!avatar200" data-content="Hexo静态网站搭建">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
 
 
 
 
 
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -556,8 +550,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

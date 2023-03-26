@@ -3,19 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>生而平凡</title>
+  <title>Linux常用命令 | 生而平凡</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="生而平凡">
-<meta property="og:url" content="https://cj25.top/index.html">
+  <meta name="description" content="1.1 常用命令pwd 显示当前所在的目录	print woking directory	打印当前所在路径  cd	切换路径		change directory 	     cd .. 返回上一级路径     cd &#x2F;     cd -     cd ~  ls	显示当前目录下的文件  rmdir 删除目录 touch 新建目录 cp 复制文件 rm 删除文件 cat 将文件内容显示到终端中 cl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="https://cj25.top/2023/03/26/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="生而平凡">
+<meta property="og:description" content="1.1 常用命令pwd 显示当前所在的目录	print woking directory	打印当前所在路径  cd	切换路径		change directory 	     cd .. 返回上一级路径     cd &#x2F;     cd -     cd ~  ls	显示当前目录下的文件  rmdir 删除目录 touch 新建目录 cp 复制文件 rm 删除文件 cat 将文件内容显示到终端中 cl">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cj25.top/.top//I:%5CMyBlog%5CgiteeBlog%5Csource%5C_posts%5CTestOne.assets%5C1676990353669-0089060f-fcba-4371-99c4-bae8f2f17850.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1676991422643-53b5520c-ec05-4b87-aed7-e9cdbc7ebe4e.png">
+<meta property="og:image" content="https://cj25.top/.top//I:%5CMyBlog%5CgiteeBlog%5Csource%5C_posts%5CTestOne.assets%5C1676991439508-6edef314-e87d-419a-9473-f83741199c79.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1677027809416-2075426c-2eb5-4b38-98e9-8794b03f9aa5.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1677073110694-eec734cf-be75-4f6c-bdcd-6a59ac15b8e6.png">
+<meta property="og:image" content="https://cj25.top/.top//I:%5CMyBlog%5CgiteeBlog%5Csource%5C_posts%5CTestOne.assets%5C1677072998615-c23a9574-4c5c-4850-8aa9-7c0f549c0902.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1677073803137-94597955-ca4e-40ad-922c-225e4d606edc.png">
+<meta property="og:image" content="https://cj25.top/.top//I:%5CMyBlog%5CgiteeBlog%5Csource%5C_posts%5CTestOne.assets%5C1677075771931-6707ecc3-4f17-4046-9d6d-b51b66a2abf1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1677112149920-7de655be-907d-4eb4-9e64-4e9cf361cb88.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1677112281294-babcc01b-eaf4-401a-9615-338249a22211.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1677113480881-1851d8aa-8dba-49f8-bc69-75a7db482355.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1677113709806-d2f68b67-fc1d-4279-93fd-57c62b860c1c.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/itchenjun/myblog@tree/main/imgs/imgs/1677396398989-0d24c8cc-0d8e-428a-9eef-40a95fa18352.png">
+<meta property="og:image" content="https://cj25.top/.top//I:%5CPrivateBlog%5CgithubBlog%5Csource%5C_posts%5CTestOne.assets%5C1677074629366-edb80ffd-f98a-40a7-ab28-299ec0b038ff.png">
+<meta property="article:published_time" content="2023-03-26T09:09:07.000Z">
+<meta property="article:modified_time" content="2023-03-26T01:29:16.643Z">
 <meta property="article:author" content="chenjun">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cj25.top/.top//I:%5CMyBlog%5CgiteeBlog%5Csource%5C_posts%5CTestOne.assets%5C1676990353669-0089060f-fcba-4371-99c4-bae8f2f17850.png">
   
     <link rel="alternative" href="/atom.xml" title="生而平凡" type="application/atom+xml">
   
@@ -246,9 +266,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2023/03/26/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
@@ -264,15 +282,35 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/26/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-        Linux常用命令
-        
-      </a>
+    <h1 class="article-title" itemprop="name">
+      Linux常用命令
+      
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+	</div>
+
+        
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2023/03/26/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="Linux常用命令">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -570,199 +608,42 @@ vi test.txt
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2023/03/26/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="Linux常用命令">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/26/newpage/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">新篇章</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-newpage" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/03/26/newpage/" class="article-date">
-  	<time datetime="2023-03-26T08:19:55.000Z" itemprop="datePublished">2023-03-26</time>
-</a>
+<div class="ds-share share" data-thread-key="Linux常用命令" data-title="Linux常用命令" data-url="https://cj25.top/2023/03/26/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"  data-images="https://foruda.gitee.com/avatar/1676353096217459510/12348154_itchenjun_1676353096.png!avatar200" data-content="Linux常用命令">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/26/newpage/">
-        新篇章
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a target="_blank" rel="noopener" href="https://chrome.zzzmh.cn/help/setup">Google插件</a></p>
-<h1 id="Google-Plugging"><a href="#Google-Plugging" class="headerlink" title="Google Plugging"></a>Google Plugging</h1><p>(插件助手)</p>
-<p><a target="_blank" rel="noopener" href="https://www.chrome666.com/">https://www.chrome666.com/</a></p>
-<p><img src="/posts/undefined/1674030638202-38cbbd86-29f6-4451-a251-16919731eee8.png" alt="img"></p>
-<h3 id="安装方法："><a href="#安装方法：" class="headerlink" title="安装方法："></a>安装方法：</h3><p>下载插件后，保存到本地文件夹中，后面会用到</p>
-<p><img src="/posts/undefined/1675332525322-f13d38f4-5f5c-4529-82da-4b3137d633a1.png" alt="img"></p>
-<ul>
-<li>找到 扩展 选项，每个浏览器的位置不一样，打卡管理扩展，开启开发人员模式</li>
-</ul>
-<p><img src="/posts/undefined/1675332587227-ba247be8-5c59-45db-a986-739e955711b6.png" alt="img">，	 <img src="/posts/undefined/1675332673896-6c976612-759e-49d9-8e33-38a45772e1c7.png" alt="img"> ，	<img src="/posts/undefined/1675332732307-0cacb9c3-e6c1-4780-bf64-c206e18ffbee.png" alt="img"></p>
-<ul>
-<li>将插件拖拽到浏览器上</li>
-</ul>
-<p><img src="/posts/undefined/1675333040788-27b987f3-e759-4251-9b02-f47ac056ff8c.png" alt="img"></p>
-<ul>
-<li>弹出提示框，选择添加扩展</li>
-</ul>
-<p><img src="/posts/undefined/1675333095364-a4206e32-bac1-4591-a9a4-b5ca07737564.png" alt="img"></p>
-<p>再扩展中可以选择启用</p>
-<p><img src="/posts/undefined/1675333153029-48d2fe02-a840-46a0-8c23-f745ad2ea227.png" alt="img"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2023/03/26/newpage/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="新篇章">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
+ </div>
+ 
 
 
 
 
 
-
-
-  
-    <article id="post-paper" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/03/26/paper/" class="article-date">
-  	<time datetime="2023-03-25T22:52:39.000Z" itemprop="datePublished">2023-03-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/26/paper/">
-        paper
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/paper/" rel="tag">paper</a></li></ul>
-	</div>
-
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2023/03/26/paper/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="paper">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -788,8 +669,8 @@ vi test.txt
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
